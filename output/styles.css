@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap");
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Noto Sans Mono", monospace;
+}
+.card__title {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  text-shadow: 2px 4px 6px rgba(92, 80, 71, 0.4);
+}
+.card__img {
+  width: 300px;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+.card__items {
+  display: flex;
+  gap: 2rem;
+}
+.card__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  width: 300px;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 4rem;
+  background-color: #d8c3a5;
+  box-shadow: 0 0 20px 5px rgba(92, 80, 71, 0.4);
+}
+.card__item:hover {
+  transform: translateY(-3px);
+  transition: ease-in-out 0.2s;
+  background-color: #e9d9c4;
+}
+.card__item-title {
+  color: #5c5047;
+  text-decoration: underline;
+}
+.card__item-text {
+  font-size: 0.8rem;
+}
+.card__item-price-current {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
+}
+.card__item-price-low {
+  color: red;
+  text-decoration: line-through;
+}
+.card__item-price {
+  margin-top: auto;
+}
+.card__button {
+  padding: 1rem;
+  width: fit-content;
+  border-radius: 5px;
+  border: none;
+  background-color: #d8c3a5;
+  font-family: "Noto Sans Mono", monospace;
+}
+.card__button--active:hover {
+  background-color: #645b51;
+  color: #e9e6e3;
+  transition: ease-in-out 0.2s;
+}
+
+/*# sourceMappingURL=styles.css.map */

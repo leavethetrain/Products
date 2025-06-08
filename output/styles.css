@@ -74,6 +74,7 @@ body {
 .card__item-text {
   color: #5c5047;
   font-size: 0.8rem;
+  margin-bottom: 1rem;
 }
 .card__item-price-current {
   font-size: 1.4rem;

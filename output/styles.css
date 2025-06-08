@@ -1,34 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f7f3e2;
+  background-size: cover;
+}
+
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Noto Sans Mono", monospace;
+  padding-top: 2rem;
 }
 .card__title {
+  color: #5c5047;
   font-size: 3rem;
   margin-bottom: 4rem;
-  text-shadow: 2px 4px 6px rgba(92, 80, 71, 0.4);
 }
 .card__img {
-  width: 300px;
+  display: block;
+  width: 270px;
   margin-bottom: 1rem;
   border-radius: 6px;
+  z-index: 1;
+}
+.card__sale {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0.8rem;
+  padding: 0.3rem;
+  width: 4rem;
+  border-radius: 0 10px 10px 0;
+  background-color: red;
+  color: white;
+  z-index: 10;
+  font-size: 0.9rem;
 }
 .card__items {
   display: flex;
   gap: 2rem;
 }
 .card__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  width: 300px;
+  width: 270px;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.8rem;
   margin-bottom: 4rem;
   background-color: #d8c3a5;
-  box-shadow: 0 0 20px 5px rgba(92, 80, 71, 0.4);
+  box-shadow: 0 0 5px 2px rgba(92, 80, 71, 0.4);
 }
 .card__item:hover {
   transform: translateY(-3px);
@@ -40,18 +68,22 @@
   text-decoration: underline;
 }
 .card__item-text {
+  color: #5c5047;
   font-size: 0.8rem;
 }
 .card__item-price-current {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: black;
 }
 .card__item-price-low {
   color: red;
   text-decoration: line-through;
+  font-size: 1.2rem;
 }
 .card__item-price {
+  display: flex;
+  justify-content: space-between;
   margin-top: auto;
 }
 .card__button {
@@ -61,6 +93,7 @@
   border: none;
   background-color: #d8c3a5;
   font-family: "Noto Sans Mono", monospace;
+  box-shadow: 0 0 5px 2px rgba(92, 80, 71, 0.4);
 }
 .card__button--active:hover {
   background-color: #645b51;
@@ -70,7 +103,7 @@
 
 @media only screen and (max-width: 600px) {
   .card {
-    margin-bottom: 3rem;
+    padding-bottom: 3rem;
   }
   .card__title {
     font-size: 2rem;

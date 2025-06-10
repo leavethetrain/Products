@@ -45,6 +45,12 @@ body {
     background-color: $backgroundcolor;
     box-shadow: 0 0 5px 2px rgba(92, 80, 71, 0.4);
 
+    &--active:hover {
+      transform: translateY(-3px);
+      transition: ease-in-out 0.2s;
+      background-color: #e9d9c4;
+    }
+
     &__img {
       display: block;
       width: 270px;
@@ -80,6 +86,17 @@ body {
       display: flex;
       justify-content: space-between;
       margin-top: auto;
+
+      &--current {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: black;
+      }
+      &--low {
+        color: red;
+        text-decoration: line-through;
+        font-size: 1.2rem;
+      }
     }
 
     &__button {
@@ -91,29 +108,12 @@ body {
       font-family: $font;
       box-shadow: 0 0 5px 2px rgba(92, 80, 71, 0.4);
       margin-bottom: 3rem;
-    }
 
-    &__price--current {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: black;
-    }
-    &__price--low {
-      color: red;
-      text-decoration: line-through;
-      font-size: 1.2rem;
-    }
-
-    &.product:hover {
-      transform: translateY(-3px);
-      transition: ease-in-out 0.2s;
-      background-color: #e9d9c4;
-    }
-
-    &__button--active:hover {
-      background-color: #645b51;
-      color: #e9e6e3;
-      transition: ease-in-out 0.2s;
+      &--active:hover {
+        background-color: #645b51;
+        color: #e9e6e3;
+        transition: ease-in-out 0.2s;
+      }
     }
   }
 }

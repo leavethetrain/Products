@@ -12,51 +12,28 @@ body {
   background-size: cover;
 }
 
-.card {
+.productsection {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: $font;
-  padding-top: 2rem;
+  padding-top: 3rem;
 
   &__title {
     color: $text-color;
     font-size: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
-  &__img {
-    display: block;
-    width: 270px;
-    margin-bottom: 1rem;
-    border-radius: 6px;
-    z-index: 1;
-  }
-
-  &__sale {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    margin: 0.8rem;
-    padding: 0.3rem;
-    width: 4rem;
-    border-radius: 0 10px 10px 0;
-    background-color: red;
-    color: white;
-    z-index: 10;
-    font-size: 0.9rem;
-  }
-
-  &__items {
+  &__item {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
     gap: 2rem;
   }
 
-  &__item {
+  .product {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -67,69 +44,88 @@ body {
     margin-bottom: 4rem;
     background-color: $backgroundcolor;
     box-shadow: 0 0 5px 2px rgba(92, 80, 71, 0.4);
-  }
-  &__item:hover {
-    transform: translateY(-3px);
-    transition: ease-in-out 0.2s;
-    background-color: #e9d9c4;
-  }
 
-  &__item-title {
-    margin-bottom: 1rem;
-    color: $text-color;
-    text-decoration: underline;
-  }
+    &__img {
+      display: block;
+      width: 270px;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      z-index: 1;
+    }
 
-  &__item-text {
-    color: $text-color;
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
-  }
+    &__sale {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      margin: 0.8rem;
+      padding: 0.3rem;
+      width: 4rem;
+      border-radius: 0 10px 10px 0;
+      background-color: red;
+      color: white;
+      z-index: 10;
+      font-size: 0.9rem;
+    }
+    &__title {
+      margin-bottom: 1rem;
+      color: $text-color;
+      text-decoration: underline;
+    }
+    &__text {
+      color: $text-color;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+    &__price {
+      display: flex;
+      justify-content: space-between;
+      margin-top: auto;
+    }
 
-  &__item-price-current {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: black;
-  }
+    &__button {
+      padding: 1rem;
+      width: fit-content;
+      border-radius: 5px;
+      border: none;
+      background-color: $backgroundcolor;
+      font-family: $font;
+      box-shadow: 0 0 5px 2px rgba(92, 80, 71, 0.4);
+      margin-bottom: 3rem;
+    }
 
-  &__item-price-low {
-    color: red;
-    text-decoration: line-through;
-    font-size: 1.2rem;
-  }
+    &__price--current {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: black;
+    }
+    &__price--low {
+      color: red;
+      text-decoration: line-through;
+      font-size: 1.2rem;
+    }
 
-  &__item-price {
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
-  }
+    &.product:hover {
+      transform: translateY(-3px);
+      transition: ease-in-out 0.2s;
+      background-color: #e9d9c4;
+    }
 
-  &__button {
-    padding: 1rem;
-    width: fit-content;
-    border-radius: 5px;
-    border: none;
-    background-color: $backgroundcolor;
-    font-family: $font;
-    box-shadow: 0 0 5px 2px rgba(92, 80, 71, 0.4);
-    margin-bottom: 3rem;
-  }
-
-  &__button--active:hover {
-    background-color: #645b51;
-    color: #e9e6e3;
-    transition: ease-in-out 0.2s;
+    &__button--active:hover {
+      background-color: #645b51;
+      color: #e9e6e3;
+      transition: ease-in-out 0.2s;
+    }
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .card {
+  .productsection {
     padding-bottom: 3rem;
     &__title {
       font-size: 2rem;
     }
 
-    &__items {
+    &__item {
       display: flex;
       flex-direction: column;
       align-items: center;
